@@ -7,10 +7,12 @@ export const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
     scroll-behavior: smooth;
   }
+
   html {
     font-size: 62.5%;
     height: 100vh;
   }
+
   body {
     font-size: 1.6rem;
   }
