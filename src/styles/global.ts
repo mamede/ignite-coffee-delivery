@@ -10,6 +10,7 @@ export const GlobalStyles = createGlobalStyle`
 
   html {
     height: 100vh;
+    padding: 0 10rem;
   }
 
   a {
