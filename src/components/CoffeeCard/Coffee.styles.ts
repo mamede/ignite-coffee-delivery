@@ -1,94 +1,153 @@
 import styled from 'styled-components'
+import { AiOutlineMinus as Minus, AiOutlinePlus as Plus } from 'react-icons/ai'
 
 export const CoffeeCardContainer = styled.div`
-  height: 31rem;
-  width: 25.6rem;
-  background-color: ${({ theme }) => theme.colors['base-card']};
-  border-radius: 5px 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  margin-top: 24px;
+  width: 256px;
+  height: 310px;
+  padding: 20px;
+  background-color: ${({ theme }) => theme['gray-100']};
+  border-radius: 6px 36px;
 
-  & img {
-    margin-top: -4.5rem;
-    width: 12rem;
-    margin-bottom: 0.5rem;
+  img {
+    margin-top: -45px;
   }
 `
 
-export const CoffeeTags = styled.div`
-  width: 100%;
+export const Tags = styled.div`
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  gap: 4px;
+`
+
+export const Tag = styled.span`
+  padding: 4px 8px;
+  margin: 12px auto 16px;
+  background-color: ${({ theme }) => theme['yellow-100']};
+  color: ${({ theme }) => theme['yellow-700']};
+  font-size: 0.625rem;
+  font-weight: 700;
   text-transform: uppercase;
-  font-size: ${({ theme }) => theme.fonts.sizes[16]};
-
-  & span {
-    padding: 5px 10px;
-    color: ${({ theme }) => theme.colors['yellow-dark']};
-    background-color: ${({ theme }) => theme.colors['yellow-light']};
-    border-radius: 15px;
-    font-weight: bold;
-    margin: 0.5rem;
-  }
+  border-radius: 16px;
 `
 
-export const CoffeeInfo = styled.div`
-  width: 90%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+export const CoffeeType = styled.h3`
+  font-size: 1.25rem;
+  font-family: 'Baloo 2', cursive;
+  color: ${({ theme }) => theme['gray-700']};
+  font-weight: 700;
+`
+
+export const CoffeeDescription = styled.span`
+  margin: 8px auto 32px;
   text-align: center;
-  margin: 10px 0;
+  font-size: 0.875rem;
+  color: ${({ theme }) => theme['gray-500']};
+`
 
-  & h6 {
-    margin-bottom: 0.7rem;
-    font-size: ${({ theme }) => theme.fonts.sizes[32]};
-    color: ${({ theme }) => theme.colors['base-subtitle']};
-  }
+export const BuyContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 4px;
+`
 
-  & p {
-    color: ${({ theme }) => theme.colors['base-label']};
-    font-size: ${({ theme }) => theme.fonts.sizes[24]};
+export const Price = styled.span`
+  color: ${({ theme }) => theme['gray-600']};
+  font-size: 0.875rem;
+  font-weight: 400;
+
+  span {
+    margin-left: 4px;
+    font-size: 1.5rem;
+    font-family: 'Baloo 2', cursive;
+    font-weight: 800;
   }
 `
 
-export const CoffeeSale = styled.div`
+export const BuyActionWrapper = styled.div`
   display: flex;
-  align-items: center;
+  gap: 8px;
+`
+
+export const ProductAmountWrapper = styled.div`
+  position: relative;
+`
+
+export const ProductAmountInput = styled.input`
+  padding: 8px;
+  width: 72px;
+  height: 38px;
+  border: 0;
+  border-radius: 8px;
+  background-color: ${({ theme }) => theme['gray-300']};
+  font-size: 1rem;
+  color: ${({ theme }) => theme['gray-800']};
+  text-align: center;
+`
+
+export const BaseProductAmountButton = styled.button`
+  position: absolute;
+  top: 50%;
+  padding: 8px;
+  transform: translateY(-50%);
+  display: flex;
   justify-content: center;
-  margin-top: 2rem;
+  align-items: center;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+`
 
-  & p {
-    font-size: ${({ theme }) => theme.fonts.sizes[24]};
-    margin-right: 2rem;
+export const ProductMinusAmountButton = styled(BaseProductAmountButton)`
+  left: 0px;
+`
+export const ProductPlusAmountButton = styled(BaseProductAmountButton)`
+  right: 0px;
+`
+
+export const StyledMinus = styled(Minus)`
+  width: 14px;
+  height: 14px;
+  color: ${({ theme }) => theme['purple-400']};
+
+  transition: color 0.2s;
+
+  &:hover {
+    color: ${({ theme }) => theme['purple-700']};
   }
+`
 
-  & p span {
-    color: ${({ theme }) => theme.colors['base-title']};
-    font-family: ${({ theme }) => theme.fonts.family.secondary};
-    font-weight: bold;
-    font-size: ${({ theme }) => theme.fonts.sizes[32]};
+export const StyledPlus = styled(Plus)`
+  width: 14px;
+  height: 14px;
+  color: ${({ theme }) => theme['purple-400']};
+
+  transition: color 0.2s;
+
+  &:hover {
+    color: ${({ theme }) => theme['purple-700']};
   }
+`
 
-  & > button {
-    background-color: ${({ theme }) => theme.colors['purple-dark']};
-    border: none;
-    border-radius: 5px;
-    margin-left: 0.8rem;
-    width: 3.2rem;
-    height: 3.2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+export const AddCartBtn = styled.button`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 38px;
+  height: 38px;
+  background-color: ${({ theme }) => theme['purple-700']};
+  border-radius: 6px;
+  border: 0;
+  cursor: pointer;
 
-  & > button svg {
-    border-radius: 5px;
-    color: white;
-    font-size: 2rem;
+  transition: background-color 0.2s;
+
+  &:hover {
+    background-color: ${({ theme }) => theme['purple-400']};
   }
 `

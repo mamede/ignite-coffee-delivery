@@ -7,8 +7,6 @@ export const HeaderContainer = styled.header`
   padding: 2rem 0;
 `
 
-export const LogoAnchor = styled.a``
-
 export const Logo = styled.img``
 
 export const ActionsContainer = styled.div`
@@ -36,9 +34,28 @@ export const CityName = styled.span`
   line-height: 130%; /* 18.2px */
 `
 
-export const CartAnchor = styled.a`
+export const CartAnchor = styled.button`
+  position: relative;
   max-height: 2.375rem;
   padding: 0.5rem;
   border-radius: 0.375rem;
   background: ${({ theme }) => theme.colors['yellow-light']};
+`
+
+export const CartLength = styled.span`
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  transform: translate(-50%, 50%);
+  content: '';
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+  background-color: ${({ theme }) => theme['yellow-700']};
+  color: ${({ theme }) => theme.white};
+  font-weight: 700;
+  font-size: 0.75rem;
 `
