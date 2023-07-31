@@ -1,7 +1,7 @@
 // ASSETS
-import { GrLocation } from 'react-icons/gr'
+import { MdLocationPin } from 'react-icons/md'
 import { IoIosCart } from 'react-icons/io'
-import logo from '../../assets/images/logo.png'
+import Logo from '../../assets/icons/logo.svg'
 
 // STYLE
 import * as S from './Header.styles'
@@ -10,15 +10,15 @@ export const Header = () => {
   return (
     <S.HeaderContainer>
       <S.LogoAnchor href="/">
-        <S.Logo src={logo} alt="Logo - ignite Coffee Delivery" />
+        <S.Logo src={Logo} alt="Logo - ignite Coffee Delivery" />
       </S.LogoAnchor>
       <S.ActionsContainer>
         <S.LocationContainer>
-          <GrLocation />
+          <MdLocationPin color="#8047F8" size={22} />
           <S.CityName>Gama, DF</S.CityName>
         </S.LocationContainer>
         <S.CartAnchor href="/">
-          <IoIosCart />
+          <IoIosCart color="#C47F17" size={22} />
         </S.CartAnchor>
       </S.ActionsContainer>
     </S.HeaderContainer>

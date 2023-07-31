@@ -9,12 +9,7 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   html {
-    font-size: 62.5%;
     height: 100vh;
-  }
-
-  body {
-    font-size: 1.6rem;
   }
 
   a {
